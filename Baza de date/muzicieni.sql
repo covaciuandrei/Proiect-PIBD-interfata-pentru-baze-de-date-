@@ -33,7 +33,7 @@ CREATE TABLE `albume` (
   KEY `fk_2_idx` (`id_muzician`),
   CONSTRAINT `fk_1` FOREIGN KEY (`id_melodie`) REFERENCES `melodii` (`id_melodie`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_2` FOREIGN KEY (`id_muzician`) REFERENCES `muzicieni` (`id_muzician`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `albume` (
 
 LOCK TABLES `albume` WRITE;
 /*!40000 ALTER TABLE `albume` DISABLE KEYS */;
-INSERT INTO `albume` VALUES (4,4,4,'Ma suni noaptea',2021),(5,5,5,'Discoteca boom',2002),(14,11,6,'Romina VTM',2023);
+INSERT INTO `albume` VALUES (4,4,3,'Summer',2012),(5,5,4,'Summer',2012),(14,13,6,'Caribe',2012);
 /*!40000 ALTER TABLE `albume` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -68,7 +68,7 @@ CREATE TABLE `melodii` (
 
 LOCK TABLES `melodii` WRITE;
 /*!40000 ALTER TABLE `melodii` DISABLE KEYS */;
-INSERT INTO `melodii` VALUES (3,'Selecta',4,'pop'),(4,'Ma suni noaptea',3,'manele'),(5,'Danseaza',5,'manele'),(11,'Trotinete',4,'manele'),(13,'Minim 2',3,'pop');
+INSERT INTO `melodii` VALUES (3,'Selecta',4,'pop'),(4,'Minim doi',3,'pop'),(5,'Dalinda',5,'pop'),(11,'In lipsa mea',4,'pop'),(13,'Balada',3,'latino');
 /*!40000 ALTER TABLE `melodii` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +95,7 @@ CREATE TABLE `muzicieni` (
 
 LOCK TABLES `muzicieni` WRITE;
 /*!40000 ALTER TABLE `muzicieni` DISABLE KEYS */;
-INSERT INTO `muzicieni` VALUES (2,'Adam','Anda',33,'2010-01-02'),(3,'Alex','Velea',32,'2011-09-09'),(4,'De la Ploiesti','Bogdan',25,'2016-01-09'),(5,'Minune','Adrian',53,'2003-02-05'),(6,'Uraganu','Tzanca',37,'2013-07-05');
+INSERT INTO `muzicieni` VALUES (2,'Adam','Anda',33,'2010-01-02'),(3,'Alex','Velea',32,'2011-09-09'),(4,'Mica','Alex',25,'2012-01-09'),(5,'Smiley','Andrei',53,'2003-02-05'),(6,'Lima','Gustavo',37,'2011-07-05');
 /*!40000 ALTER TABLE `muzicieni` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -108,4 +108,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-02-03 12:33:45
+-- Dump completed on 2023-03-09 23:29:23
